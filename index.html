@@ -1,0 +1,306 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Rutas de Prepa para Val</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: guía en una columna; cada opción es una "ficha de trámite" con datos clave en renglones etiquetados, luego tabla comparativa y lista de documentos */
+:root{
+  --bg:#eef2f3; --paper:#ffffff; --ink:#15333a; --muted:#5a6f74; --line:#d3dde0;
+  --accent:#0f6b6f; --accent-soft:#dcefee; --free:#2f7a3b; --free-soft:#e1f1e3;
+  --pay:#9a5b00; --pay-soft:#fbeed8; --warn:#b3261e; --warn-soft:#fbe4e2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"Source Sans 3",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1b1e; --paper:#162629; --ink:#e3eef0; --muted:#9db2b6; --line:#2a3f43;
+  --accent:#5cc3c6; --accent-soft:#183a3d; --free:#7ccf87; --free-soft:#1b3420;
+  --pay:#f0b65c; --pay-soft:#3a2b12; --warn:#ff8a80; --warn-soft:#3d1c1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1b1e; --paper:#162629; --ink:#e3eef0; --muted:#9db2b6; --line:#2a3f43;
+  --accent:#5cc3c6; --accent-soft:#183a3d; --free:#7ccf87; --free-soft:#1b3420;
+  --pay:#f0b65c; --pay-soft:#3a2b12; --warn:#ff8a80; --warn-soft:#3d1c1a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:800}
+h2{font-size:1.4rem;font-weight:800}
+h3{font-size:1.2rem;font-weight:600}
+p{margin:0}
+a{color:var(--accent);font-weight:600;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:10px}
+.lede{max-width:65ch;color:var(--muted);font-size:1.05rem}
+.notice{background:var(--accent-soft);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.notice strong{color:var(--ink)}
+section{display:flex;flex-direction:column;gap:14px}
+.cards{display:flex;flex-direction:column;gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.pill{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.free{background:var(--free-soft);color:var(--free)}
+.pill.pay{background:var(--pay-soft);color:var(--pay)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pills{display:flex;gap:6px;flex-wrap:wrap}
+dl{display:grid;grid-template-columns:9.5rem 1fr;gap:6px 14px;margin:0}
+dt{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;padding-top:3px}
+dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-block;padding:7px 12px;border-radius:8px;border:1px solid var(--accent);text-decoration:none;font-size:.92rem}
+.btn.primary{background:var(--accent);color:var(--paper)}
+.tip{font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+.copy{font-family:var(--f-mono);font-size:.85rem;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 6px;cursor:pointer;color:var(--ink)}
+.tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.93rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td{font-variant-numeric:tabular-nums}
+.warncard{background:var(--warn-soft);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.warncard h3{color:var(--warn)}
+ul{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:4px}
+.checks{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.checks label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.checks input{margin-top:5px;accent-color:var(--accent);width:18px;height:18px}
+.sources{font-size:.88rem;color:var(--muted)}
+.sources ul{gap:2px}
+@media (max-width:520px){dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:8px}.card{padding:16px}}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Nezahualcóyotl · CP 57000 · revisado 4 nov 2026</span>
+  <h1>Rutas de Prepa para Val</h1>
+  <p class="lede">Opciones con validez oficial de la SEP para terminar el bachillerato viviendo en Neza. Primero las gratuitas, luego las de pago oficial. Todos los enlaces llevan a sitios del gobierno o de la institución que emite el certificado.</p>
+</header>
+
+<div class="notice">
+  <strong>Regla de oro</strong>
+  <p>El certificado solo lo emite la SEP o la institución oficial cuando Val aprueba sus exámenes. Ninguna escuela privada lo "tramita". Si alguien promete el certificado sin examen, es fraude.</p>
+</div>
+
+<section>
+  <h2>Opciones oficiales</h2>
+  <div class="cards">
+
+    <article class="card">
+      <div class="card-top"><h3>CMEPA Neza: asesorías de Prepa Abierta</h3><div class="pills"><span class="pill free">Gratis</span><span class="pill free">Presencial en Neza</span></div></div>
+      <p>Centro Municipal de Educación para Adultos del Ayuntamiento de Nezahualcóyotl. Da asesorías gratuitas para preparatoria en sistema abierto. Es la opción más cercana para estudiar con maestro.</p>
+      <dl>
+        <dt>Dirección</dt><dd>Cto. Rey Neza esq. C. Barrilito, Col. Benito Juárez, 57809 Nezahualcóyotl</dd>
+        <dt>Horario</dt><dd>Matutino 8:00–13:30 · Vespertino 16:00–20:00</dd>
+        <dt>Teléfono</dt><dd><button class="copy" data-copy="55 5441 3381">55 5441 3381</button></dd>
+        <dt>Correo</dt><dd><button class="copy" data-copy="c_m_e_p_a_@live.com">c_m_e_p_a_@live.com</button></dd>
+        <dt>Inscripción</dt><dd>Todo el año; nuevo curso de prepa cada mes, según su sitio</dd>
+      </dl>
+      <div class="links"><a class="btn primary" href="https://cmepaneza.wixsite.com/cmepa-neza" target="_blank" rel="noopener">Sitio de CMEPA Neza</a></div>
+      <p class="tip">Su sitio no muestra fecha de actualización. Llamen o vayan antes para confirmar horarios y requisitos vigentes. Los exámenes oficiales igual se pagan a la SEP ($101 c/u).</p>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><h3>Preparatoria Abierta SEP (Edomex)</h3><div class="pills"><span class="pill free">Inscripción gratis</span><span class="pill pay">$101 por examen</span></div></div>
+      <p>Val estudia a su ritmo y presenta un examen por módulo. En el Estado de México la opera SEIEM (Servicios Educativos Integrados al Estado de México). Combina muy bien con las asesorías de CMEPA.</p>
+      <dl>
+        <dt>Costo</dt><dd>Inscripción y certificado gratis; $101 por cada examen</dd>
+        <dt>Tiempo</dt><dd>Depende de cuántos exámenes apruebe por periodo</dd>
+        <dt>Teléfono</dt><dd><button class="copy" data-copy="722 265 1200 ext. 1801">722 265 1200 ext. 1801</button></dd>
+        <dt>Correo</dt><dd><button class="copy" data-copy="prepa.abierta@seiem.gob.mx">prepa.abierta@seiem.gob.mx</button></dd>
+      </dl>
+      <p class="tip">Pregunten por la oficina o centro de servicios más cercano a Neza y por el calendario de exámenes.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><h3>Prepa en Línea-SEP</h3><div class="pills"><span class="pill free">Gratis</span><span class="pill free">100% en línea</span></div></div>
+      <p>Bachillerato virtual de la SEP con módulos mensuales y tutores. Ideal si Val tiene celular o computadora con internet y puede dedicar tiempo diario.</p>
+      <dl>
+        <dt>Requisitos</dt><dd>Secundaria terminada, CURP, acta de nacimiento, correo que no haya usado antes, foto y comprobante de domicilio</dd>
+        <dt>Duración</dt><dd>Unos 2 a 3 años, módulo por módulo</dd>
+        <dt>Próximo registro</dt><dd>Aún sin publicar. La convocatoria anterior de invierno abrió del 15 de dic. 2025 al 7 de ene. 2026; la de primavera, del 23 de mar. al 8 de abr. 2026. Hay que aprobar un módulo propedéutico.</dd>
+      </dl>
+      <div class="links"><a class="btn primary" href="https://prepaenlinea.sep.gob.mx" target="_blank" rel="noopener">prepaenlinea.sep.gob.mx</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><h3>Prepa en un examen: ACREDITA-BACH (CENEVAL)</h3><div class="pills"><span class="pill pay">$3,245 oficial</span><span class="pill pay">Presencial</span></div></div>
+      <p>Examen único del Acuerdo 286. Si Val lo aprueba, obtiene su certificado con validez SEP. Conviene si ya tiene buena base o puede estudiar con la guía oficial.</p>
+      <dl>
+        <dt>Costo 2026</dt><dd>Examen Global $3,245 (incluye un examen de área sin costo). Dos exámenes de área: $2,500</dd>
+        <dt>Requisitos</dt><dd>CURP, INE o pasaporte vigente y certificado de secundaria</dd>
+        <dt>Sede cercana</dt><dd>Colegio de Bachilleres del Edomex, Plantel 03 Chimalhuacán (sede de la aplicación de nov. 2026). No hubo sede en Neza.</dd>
+        <dt>Fechas</dt><dd>El registro para el examen del 22 de nov. 2026 ya cerró (5 oct.). Las fechas 2027 aún no están publicadas.</dd>
+      </dl>
+      <div class="links">
+        <a class="btn primary" href="https://talento286.ceneval.edu.mx/bachillerato/" target="_blank" rel="noopener">Información oficial CENEVAL</a>
+        <a class="btn" href="https://registroenlinea.ceneval.edu.mx/RegistroLinea/" target="_blank" rel="noopener">Registro en línea</a>
+        <a class="btn" href="#ceneval">Ver guías, estructura y cursos</a>
+      </div>
+      <p class="tip">El registro lo hace Val misma, con su CURP. El pago va al CENEVAL, no a ninguna escuela.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><h3>EXACER: Colegio de Bachilleres</h3><div class="pills"><span class="pill pay">Pago oficial</span><span class="pill pay">Solo mayores de 18</span></div></div>
+      <p>Certificación por módulos del Colegio de Bachilleres. Son 7 módulos que se aprueban con 6 o más; los reprobados se pueden volver a presentar y la inscripción dura dos años.</p>
+      <dl>
+        <dt>Costo de referencia</dt><dd>En 2025: $2,245 por los 7 módulos, o $864 por uno solo</dd>
+        <dt>Requisitos</dt><dd>18 años cumplidos, certificado de secundaria, INE, correo y foto digital con fondo blanco</dd>
+        <dt>Fechas</dt><dd>En 2025 el registro fue en enero, con examen presencial en CDMX en marzo. Revisen la convocatoria 2027.</dd>
+      </dl>
+      <div class="links"><a class="btn primary" href="https://sirec.cbachilleres.edu.mx" target="_blank" rel="noopener">sirec.cbachilleres.edu.mx</a></div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Comparación rápida</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Opción</th><th>Costo</th><th>Modalidad</th><th>Tiempo</th><th>Mejor para</th></tr></thead>
+    <tbody>
+      <tr><td>CMEPA + Prepa Abierta</td><td>$101 por examen</td><td>Presencial en Neza</td><td>Variable</td><td>Estudiar con maestro cerca de casa</td></tr>
+      <tr><td>Prepa en Línea-SEP</td><td>Gratis</td><td>En línea</td><td>2–3 años</td><td>Constancia diaria con internet</td></tr>
+      <tr><td>ACREDITA-BACH</td><td>$3,245</td><td>Examen presencial</td><td>Una aplicación</td><td>Quien ya domina los temas</td></tr>
+      <tr><td>EXACER</td><td>≈ $2,245</td><td>Examen presencial</td><td>Hasta 2 años</td><td>Mayores de 18 que avanzan por partes</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="ceneval">
+  <span class="eyebrow">A fondo</span>
+  <h2>El examen CENEVAL: ACREDITA-BACH 2026</h2>
+  <p class="lede">Es el examen del Acuerdo 286. Desde 2026 usa un instrumento actualizado con 7 áreas. Así funciona.</p>
+
+  <div class="card">
+    <h3>Cómo es el examen</h3>
+    <dl>
+      <dt>Reactivos</dt><dd>180 preguntas de opción múltiple con 3 opciones, más 25 de prueba que no cuentan</dd>
+      <dt>Formato</dt><dd>Solo en papel, en una sede presencial. Se presenta en un solo día</dd>
+      <dt>Sesión 1</dt><dd>9:00–13:30 · 92 reactivos · Pensamiento matemático, Cultura digital, Conciencia histórica y Humanidades</dd>
+      <dt>Sesión 2</dt><dd>15:00–19:00 · 88 reactivos · Ciencias naturales, experimentales y tecnología, Lengua y comunicación y Ciencias sociales</dd>
+      <dt>Para aprobar</dt><dd>La escala va de 700 a 1,300 puntos. Val necesita <strong>1,000 o más en cada una de las 7 áreas</strong></dd>
+      <dt>Si reprueba</dt><dd>1 o 2 áreas: tiene dos oportunidades con el Examen de Área dentro de un año. 3 o más áreas: resultado "No acreditado" y debe registrarse y pagar de nuevo</dd>
+    </dl>
+  </div>
+
+  <div class="card">
+    <h3>Costos y fechas</h3>
+    <dl>
+      <dt>Examen Global</dt><dd>$3,245 (2026). Incluye un examen de área sin costo</dd>
+      <dt>Dos exámenes de área</dt><dd>$2,500 (2026)</dd>
+      <dt>Pago</dt><dd>Con la ficha que genera el CENEVAL al registrarse. No se aceptan pagos en OXXO</dd>
+      <dt>Último periodo 2026</dt><dd>Registro 24 ago.–5 oct. · Examen 22 nov. · Resultados 18 dic. (ya cerrado)</dd>
+      <dt>2027</dt><dd>Calendario aún no publicado. Revisen la página oficial a inicios de año y registren a Val en cuanto abra</dd>
+      <dt>Sede cercana</dt><dd>COBAEM Plantel 03 Chimalhuacán (sede en nov. 2026)</dd>
+    </dl>
+    <div class="links">
+      <a class="btn primary" href="https://talento286.ceneval.edu.mx/bachillerato/" target="_blank" rel="noopener">Calendario y sedes</a>
+      <a class="btn" href="https://online.flippingbook.com/view/251484925/" target="_blank" rel="noopener">Convocatoria</a>
+      <a class="btn" href="https://online.flippingbook.com/view/428620763/" target="_blank" rel="noopener">Instructivo de registro</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top"><h3>Guías oficiales gratuitas</h3><span class="pill free">Gratis · del CENEVAL</span></div>
+    <p>Estas son las guías que hay que usar, porque vienen de quien hace el examen. Ningún curso puede tener material más actualizado.</p>
+    <dl>
+      <dt>Guía del sustentante</dt><dd>Temario, bibliografía y ejemplos de preguntas. <a href="https://online.flippingbook.com/view/180469134/" target="_blank" rel="noopener">Abrir guía</a></dd>
+      <dt>Tabla de contenidos</dt><dd>Los temas exactos de cada área, para armar el plan de estudio. <a href="https://online.flippingbook.com/view/927526917/" target="_blank" rel="noopener">Abrir tabla</a></dd>
+      <dt>Guía interactiva</dt><dd>Simulador del examen con práctica. Pide crear cuenta. <a href="https://guias.ceneval.edu.mx/login.php?src=acredita-bach-nem" target="_blank" rel="noopener">Abrir simulador</a></dd>
+    </dl>
+  </div>
+
+  <div class="card">
+    <h3>Después de aprobar: el certificado</h3>
+    <dl>
+      <dt>1. Documentos</dt><dd>Subir sus documentos al sistema del CENEVAL a tiempo. <a href="https://online.flippingbook.com/view/428781438/" target="_blank" rel="noopener">Instructivo de carga</a></dd>
+      <dt>2. Validación</dt><dd>El CENEVAL revisa la CURP y los documentos y avisa a la DGB (SEP)</dd>
+      <dt>3. Solicitud</dt><dd>Registrar el trámite en la DGB y pagar los derechos. <a href="https://dgb.sep.gob.mx/tramitesyservicios/" target="_blank" rel="noopener">Trámites DGB</a> · <a href="https://online.flippingbook.com/view/578899775/" target="_blank" rel="noopener">Instructivo</a></dd>
+      <dt>4. Certificado</dt><dd>Lo emite la Dirección General del Bachillerato de la SEP. Guarden el reporte de resultados: lo piden en el trámite</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="cursos">
+  <span class="eyebrow">Preparación</span>
+  <h2>Cursos para el CENEVAL</h2>
+  <div class="notice">
+    <strong>Dato importante</strong>
+    <p>El CENEVAL no da cursos ni asesorías, y no avala a ninguna escuela. Todo curso para el ACREDITA-BACH es privado. Por eso aquí van primero las opciones gratuitas que sí son de confianza.</p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <div class="card-top"><h3>Ruta gratuita recomendada</h3><span class="pill free">$0</span></div>
+      <ul>
+        <li><strong>Guía y tabla de contenidos del CENEVAL</strong> para saber qué estudiar.</li>
+        <li><strong>Asesorías gratuitas en CMEPA Neza</strong>: los temas de Prepa Abierta coinciden con varias áreas del examen. Pregunten si apoyan a quien va a presentar el CENEVAL.</li>
+        <li><strong>Khan Academy en español</strong> para Pensamiento matemático y ciencias, con ejercicios gratis. <a href="https://es.khanacademy.org" target="_blank" rel="noopener">es.khanacademy.org</a></li>
+        <li><strong>Simulador oficial</strong> al final, para medir avance antes del examen.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><h3>Plan de estudio sugerido (12 semanas)</h3><span class="pill pay">Orientativo</span></div>
+      <dl>
+        <dt>Semanas 1–2</dt><dd>Leer la guía, hacer el simulador una vez y anotar áreas débiles</dd>
+        <dt>Semanas 3–5</dt><dd>Pensamiento matemático y Cultura digital</dd>
+        <dt>Semanas 6–8</dt><dd>Ciencias naturales, experimentales y tecnología</dd>
+        <dt>Semanas 9–10</dt><dd>Lengua y comunicación, Humanidades, Conciencia histórica y Ciencias sociales</dd>
+        <dt>Semanas 11–12</dt><dd>Repaso de áreas débiles y simulador completo con horario real (dos sesiones de 4 h)</dd>
+      </dl>
+      <p class="tip">Como hay que sacar 1,000 en cada área, conviene dedicar más tiempo a la más débil que a la favorita.</p>
+    </article>
+  </div>
+
+  <div class="warncard">
+    <h3>Si deciden pagar un curso privado (cursoCIE u otro)</h3>
+    <p>No pude verificar la reputación de ningún curso privado en particular, así que no recomiendo uno. Antes de pagar, revisen esto:</p>
+    <ul>
+      <li>Que Val haga su registro en el CENEVAL con su propio folio y pague el examen aparte, al CENEVAL.</li>
+      <li>Que le den contrato, razón social, RFC, dirección física y factura.</li>
+      <li>Que su material siga el temario 2026 de 7 áreas. Si hablan de 5 áreas o 200 preguntas, su material es viejo.</li>
+      <li>Que la garantía de "si no pasas no pagas" esté por escrito con sus condiciones.</li>
+      <li>Que nunca pidan su contraseña ni ofrezcan "ayudarla" durante el examen. Eso anula el resultado.</li>
+      <li>Que tengan reseñas reales en Google Maps o Facebook, con quejas y respuestas.</li>
+    </ul>
+    <p>Quejas: PROFECO, Teléfono del Consumidor 55 5568 8722.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Documentos que Val debe tener listos</h2>
+  <div class="checks">
+    <label for="d1"><input type="checkbox" id="d1"> CURP impresa o en PDF</label>
+    <label for="d2"><input type="checkbox" id="d2"> Acta de nacimiento</label>
+    <label for="d3"><input type="checkbox" id="d3"> Certificado de secundaria (ambos lados, escaneado)</label>
+    <label for="d4"><input type="checkbox" id="d4"> INE vigente (o pasaporte)</label>
+    <label for="d5"><input type="checkbox" id="d5"> Correo electrónico propio y activo</label>
+    <label for="d6"><input type="checkbox" id="d6"> Foto digital reciente con fondo blanco</label>
+    <label for="d7"><input type="checkbox" id="d7"> Comprobante de domicilio reciente</label>
+  </div>
+</section>
+
+<section class="sources">
+  <h3>Fuentes consultadas</h3>
+  <ul>
+    <li><a href="https://talento286.ceneval.edu.mx/bachillerato/" target="_blank" rel="noopener">CENEVAL · Talento 286, bachillerato</a></li>
+    <li><a href="https://ceneval.edu.mx/nueva-acredita-2/" target="_blank" rel="noopener">CENEVAL · ACREDITA-BACH</a></li>
+    <li><a href="https://cmepaneza.wixsite.com/cmepa-neza" target="_blank" rel="noopener">CMEPA Neza</a></li>
+    <li><a href="https://mextudia.com/prepa-abierta-por-estado/" target="_blank" rel="noopener">Mextudia · Prepa Abierta por estado</a></li>
+    <li><a href="https://www.unotv.com/nacional/prepa-linea-sep-convocatoria-g87-registro-fechas-requisitos/" target="_blank" rel="noopener">UnoTV · Convocatoria Prepa en Línea G87</a></li>
+    <li><a href="https://www.cronista.com/mexico/actualidad-mx/el-nuevo-beneficio-que-ofrece-el-gobierno-de-mexico-y-aplica-tambien-para-extranjeros-comienza-el-15-de-diciembre" target="_blank" rel="noopener">El Cronista · Prepa en Línea G84</a></li>
+    <li><a href="https://www.chilango.com/noticias/educacion/certificado-de-bachillerato-en-un-dia-examen-exacer-2025-fecha-convocatoria/" target="_blank" rel="noopener">Chilango · EXACER 2025</a></li>
+  </ul>
+  <p>Costos y fechas cambian. Confírmenlos siempre en el sitio oficial antes de pagar.</p>
+</section>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const t=b.dataset.copy, orig=b.textContent;
+  const done=()=>{b.textContent='Copiado';setTimeout(()=>b.textContent=orig,1400)};
+  try{navigator.clipboard.writeText(t).then(done).catch(()=>{const r=document.createRange();r.selectNodeContents(b);const s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(e){}
+}));
+</script>
+
+</body></html>
